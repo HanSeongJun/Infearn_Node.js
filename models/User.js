@@ -33,4 +33,4 @@ const UserSchema = mongoose.Schema({
 })
 
 const User = mongoose.model('User', UserSchema)
-module.exports = {User} // 외부에사 접근이 가능하도록 
+module.exports = {User} // 외부에서 접근이 가능하도록 
