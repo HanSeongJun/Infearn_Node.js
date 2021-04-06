@@ -14,7 +14,7 @@ const userSchema = mongoose.Schema({
         trim: true, // 이메일의 공백을 없애주는 역할 
         unique: 1 // 똑같은 이메일을 사용하는 것을 방지 
     },
-    password: {
+    password: { 
         type: String,
         minlength: 5
     },
@@ -88,12 +88,6 @@ userSchema.statics.findbyToken = function(token, cb ) {
         })
     })
 }
-
-
-
-
-
-
 
 // 스키마를 모델로 감싸기 
 const User = mongoose.model('User', userSchema)

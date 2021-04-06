@@ -4,7 +4,7 @@ const port = 5000
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const config = require('./config/key')
-const { auth } = require('../middleware/auth')
+const { auth } = require('./middleware/auth')
 const { User } = require("./models/User");
 
 app.use(express.urlencoded({ extended: true}));
@@ -19,7 +19,10 @@ mongoose.connect(config.mongoURI , {
 .then( () => console.log('MongoDB Connected...'))
 .catch(err => console.log(err))
 
-app.get('/' , (req, res) => res.send('Hello World. hi'))
+app.get('/' , (req, res) => res.send('안녕하세요.'))
+app.get('/api/hello', (req, res) => {
+    res.send("hi~");
+})
 
 app.post('/api/users/register', (req, res) => {
     // 회원가입을 할 때 필요한 정보들을 client에서 가져오면
@@ -89,18 +92,5 @@ app.get('/api/users/logout', auth, (req, res) => {
             })
         })
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 app.listen(port, () => console.log('Example app listening on port ${port}!'))
