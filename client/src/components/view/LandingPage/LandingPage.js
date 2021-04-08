@@ -10,7 +10,7 @@ function LandingPage() {
 
     return (
         <div>
-            Landing Page 랜딩 페이지
+            Hi
         </div>
     )
 }
