@@ -17,8 +17,6 @@ function LoginPage(props) {
         setPassword(event.currentTarget.value)
     }
 
-    dispatch(loginUser())
-
     const onSubmitHandler = (event) => {
         event.preventDefault();
 
