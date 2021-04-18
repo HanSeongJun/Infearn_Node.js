@@ -1,4 +1,3 @@
-<h1>Boiler_Plate </h1>
 <h2>Node.js 와 React를 활용한 회원가입 페이지</h2>
 
 강의 주소 : 
